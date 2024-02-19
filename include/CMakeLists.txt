@@ -1,0 +1,3 @@
+add_subdirectory(ImageReconstruct)
+add_subdirectory(cameraSpecs)
+add_subdirectory(draw3dObject)
