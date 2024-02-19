@@ -6,12 +6,12 @@ I tried add a cube has real centimetres measures to 2d image and I tried measure
 [movie.mp4](https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/videos/opticalMeasure.mp4)
 <div style="float:left">
   <div>
-      <video width="320" height="240" controls>
+      <video width="320" height="240" controls autoplay>
         <source src="https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/videos/visualreallityObject.mp4" type="video/mp4">
       </video>
   </div>
  <div>
-      <video width="320" height="240" controls>
+      <video width="320" height="240" controls autoplay>
         <source src="https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/videos/opticalMeasure.mp4" type="video/mp4">
       </video>
   </div>
