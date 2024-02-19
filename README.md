@@ -1,2 +1,2 @@
-# Virtual Reallity and Optical Measuring with Image Reconstruct | 'Image Reconstruct' ile Sanal Gerçeklik ve Optik Ölçme
-görüntüdeki bir noktanın gerçek dünyadaki konumu bulduk ve gerçek Dünyada hayali bir küp oluşturup onu 2d görüntüye yansıttık |  We found the location of a point in the image in the real world and created an imaginary cube in the real World and projected it onto the 2D image.
+# [EN] Virtual Reallity and Optical Measuring with Image Reconstruct
+in this project, i looked for anwers to 'How is runnig Virtual Reallity systems ?' and 'How can i measure a real object's centimetres size with one camera ?'. When i searching answers i found <a href="https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html">Camera Calibration and 3D Reconstruction</a> topic in opencv Documentations. 
