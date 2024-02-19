@@ -3,7 +3,9 @@ thanks for reading. In this project, i looked for anwers to 'How is runnig Virtu
 
 
 I tried add a cube has real centimetres measures to 2d image and I tried measure real centimetre to distance between two 2d points in image. You can look this videos.
-[movie.mp4](https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/videos/opticalMeasure.mp4)
+
+https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/videos/opticalMeasure.mp4
+
 <div style="float:left">
   <div>
       <video controls autoplay>
