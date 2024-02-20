@@ -28,6 +28,15 @@ make
 ./image_reconstruct
 ```
 
+## How tu use
+* this program have two mode. You can change mode with middle button on mouse
+1. First mode is optical Measure: this is meausing real centimetres what you selected.
+- you can use left button on mouse for start point and you can use rigth button for end point. This mode measure between two point in real centimetres automatically.
+2. Second mode is Virtual Reality. this is drawing a cube on Image but you can change position this cube and you can change size this cube.
+- just use 'w' button on keyboard for bigger cube or just use 's' button for smaller cube. this program drawing your cube automatically.
+
+Enjoy!
+
 ## What are this code doing ?
 #### we declared global variables firstly. These are using in functions
 ```c++
