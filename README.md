@@ -65,5 +65,46 @@ Reconstructer.cal_Rotation(0,-58,0,1);// // kameranın gerçek dünyada bulundu�
 Reconstructer.set_translatationMatrix(0,-150,-150.0); // kameranın gerçek dünyada ki konumu | the position where the camera is located in the real world
 Reconstructer.set_Zc(-150.0); // zeminden yüksekliği (konumdaki z ekseni ile aynıdır!) | height above ground (same as z-axis at location!)
 Reconstructer.cal_Fp(); // mesafeÖlçer(range Finder) için fovAçı Donusumu hesaplanır | Calculate Fov to Degree tansform for range Finder
+```
+#### and last step is loop. this is end of global informations about this code. We will look detail functions next part.
+```c++
+// opencv ayarları [adjusting]
+    // ---------------------------
+    cv::Mat image, showImage, prcImage;
+    image = cv::imread("../files/example.jpg");
+    char key;
+    cv::Size showSize(1008, 756); //1008, 756
+    cv::namedWindow("3d-reconstruct");
+    cv::setMouseCallback("3d-reconstruct", MouseCallbackControl, NULL);
+    // ---------------------------
+
+    // ana (main) dongu (loop)
+    // -----------------------
+    
+    for(;;){
+        showImage = image.clone();
+        cv::resize(showImage,showImage,showSize);
+
+        drawInformation(showImage);
+    
+        if(moveObject) {
+            drawObject(showImage);
+        }
+        else {
+            drawLine(showImage);
+        }
+        
+        cv::imshow("3d-reconstruct",showImage);
+        key = cv::waitKey(1);
+        if (key == 'q'){
+            break;
+        }
+        else if(key == 'w'){
+            boxSize = std::min(100,boxSize+10);
+        }
+        else if(key == 's'){
+             boxSize = std::max(10,boxSize-10);
+        }
+    }
 
 ```
