@@ -109,5 +109,27 @@ for(;;){
 
 ```
 
-## How can we calculate 2d Image cordinate to 3d real wordl cordinate ? 
-lorem 
+## How can we calculate 2d Image cordinate to 3d real world cordinate ? 
+Actually , we are already using this calculation in a lot of functions in this code. We are calculating 2d to 3d transform and 3d to 2d transformation.
+#### look this 'calculateMousePosinWorld' functions!
+we are transforming mouse cordinate in image(2d) to 3d real world cordinate in this function for move our cube!. We are moving our cube like it is real. But actually it is just <i>Virtual reallty</i>. Please look visualreallityObject.mp4 video.
+```c++
+void calculateMousePosinWorld(cv::Point2i pos2d){
+    cv::Point2d ics_point;
+    cv::Point2i pcs_point;
+    double Zc = Reconstructer.calRange(pos2d);
+    std::cout << "Zc: " << Zc << std::endl;
+    Reconstructer.set_Zc(Zc);
+    Reconstructer.cvt_Image2World(pos2d,object3dCenter,pcs_point,ics_point);
+}
+```
+steps:
+1. we are waiting 2d image positions (pos2d).
+2. we are declare diffrent cordinate system variables for calculation (please look <a href="https://github.com/umutkaanbaser/imagereconstruct/tree/main/Documentations">Image Reconstruct Documentations</a>)
+3. We have to know 'how many centimetres far from camera this object ? '. We are using 'calRange' method for this info.
+4. and we are setting this info with set_Zc (Zc is Z axis value in Camera Cordinate System)
+5. the last step is we are transform with 'cvt_Image2World' method. Please check 'Image Reconstruct Documentations' for more info.
+
+other functions not diffrent this process.
+
+
