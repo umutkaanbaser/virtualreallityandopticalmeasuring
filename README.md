@@ -13,3 +13,7 @@ https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193
 
 https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193897/ffaed67d-afb3-48fb-9a02-a2f5fbf932ce
 
+
+## Required Modules
+1. <a href="https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html">Opencv 4.8.0</a>
+2. <a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>
