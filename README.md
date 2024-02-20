@@ -7,3 +7,9 @@ I tried add a cube has real centimetres measures to 2d image and I tried measure
 
 https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193897/75573805-f98e-45a0-9b15-1b69b0eb84c3
 
+<br/>
+
+
+
+https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193897/ffaed67d-afb3-48fb-9a02-a2f5fbf932ce
+
