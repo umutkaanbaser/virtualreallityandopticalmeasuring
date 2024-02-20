@@ -41,3 +41,29 @@ int endPosition[2]   = {0,0};
 ..
 ..
 ```
+#### after we are setupping Image Reconstruct and Camera Specs. this step is really important. We have to give real and true values about Camera. You can find Camera Specs in the camera's datasheet.
+```c++
+Camera.setFov(58.2,73.2); // Kamera'nın görüş açısını bildiririz. | We set the fov information about the camera
+Reconstructer.set_camera_Manuel("iphone camera", // hangi kamera | which camera
+"6Splus", // hangi algılayıcı | which sensor
+0.00155, // piksel yüksekliği | pixel heigth
+0.00155, // piksel genişliği | pixel weigth
+3024, // dikeydeki piksel sayısı | count of vertical pixels 
+4032, // yataydaki piksel sayısı | count of horizantical pixels 
+4.68, // algılayıcı yüksekliği | sensor heigth
+6.24, // algılayıcı genişliği | sensor weigth
+4.2, // odak uzaklığı | focal length
+Camera // Camera objesini bu bilgilerin içine yazılması için veririz | we are giving to Camera object for it write the information on the object
+); 
+```
+
+#### the next step is Camera positions infos. We have to give real centimetres values and real degree values (euler) know about camera position. 
+```C++
+Reconstructer.set_worldType(WORLDTYPE::CENTIMETER); // ölçüm sistemini söyleriz | we are setting measurement
+Reconstructer.set_frame(756,1008);  // görüntü boyutunu | image size
+Reconstructer.cal_Rotation(0,-58,0,1);// // kameranın gerçek dünyada bulunduğu euler açıları | Euler angles where the camera is located in the real world
+Reconstructer.set_translatationMatrix(0,-150,-150.0); // kameranın gerçek dünyada ki konumu | the position where the camera is located in the real world
+Reconstructer.set_Zc(-150.0); // zeminden yüksekliği (konumdaki z ekseni ile aynıdır!) | height above ground (same as z-axis at location!)
+Reconstructer.cal_Fp(); // mesafeÖlçer(range Finder) için fovAçı Donusumu hesaplanır | Calculate Fov to Degree tansform for range Finder
+
+```
