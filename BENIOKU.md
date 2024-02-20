@@ -1,5 +1,5 @@
-# [EN] 'Image Reconstruct' ile Sanal Gerçeklik ve Optik Ölçekleme
-<b><i>([EN] türkçe döküman için <a href="https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/BENIOKU.md">BENIOKU.md</a>'ye bakınız. ) </i></b></br>
+# [TR] 'Image Reconstruct' ile Sanal Gerçeklik ve Optik Ölçekleme
+<b><i>([EN] Please check this <a href="https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/blob/main/BENIOKU.md">README.md</a> file for english document.) </i></b></br>
 Okuduğunuz için teşekkür ederim. Bu projede , 'Sanal gerçeklik sistemleri nasıl çalışır ? ' ve 'tek kamera ile gerçek santimetre olarak ölçüm yapabilir miyiz ?' sorularının cevaplarını aradım. ararken, opencv'nin <a href="https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html">Camera Calibration and 3D Reconstruction</a> dökümanını buldum ve bu bir dünyanın kapısnı araladı benim için. (Onu ve okuğun diğer dökümanları   <a href="https://github.com/umutkaanbaser/imagereconstruct">ImageReconstruct</a> repomda bulabilirsiniz.). 
 
 
@@ -30,10 +30,10 @@ make
 
 ## Nasıl Kullanılır ?
 * Programı 2 durumu vardır. Bunlar sanal gerçeklik ve optik ölçmedir.
-1. First mode is optical Measure: this is meausing real centimetres what you selected.
-- you can use left button on mouse for start point and you can use rigth button for end point. This mode measure between two point in real centimetres automatically.
-2. Second mode is Virtual Reality. this is drawing a cube on Image but you can change position this cube and you can change size this cube.
-- just use 'w' button on keyboard for bigger cube or just use 's' button for smaller cube. this program drawing your cube automatically.
+1. İlk durum Optik Ölçme: Seçmiş olduğunuz uzunluğu santimetre olarak ölçer.
+-  Farenin sol tuşu ile başlangıcı, sağ tuşu ile bitiş noktasını seçiniz. Program otomatik olarak arasındaki mesafeyi gerçek şekilde ölçeçektir.
+2. İkinci Durum Sanal Gerçeklik: Görsele bir küp çizebilirsiniz. İsterseniz bu kübün boyutunu büyültüp küçültebilir, konumu değiştirebilirisiniz.
+- daha büyük küp için 'w' tuşuna basın yada daha küçük küp için 's' tuşuna başın ve fareyi istediğiniz noktaya taşıyın. Program kübü otomatik olarak çizer.
 
 Enjoy!
 
