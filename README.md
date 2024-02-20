@@ -14,6 +14,30 @@ https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193
 https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193897/ffaed67d-afb3-48fb-9a02-a2f5fbf932ce
 
 
-## Required Modules
+### Required Modules
 1. <a href="https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html">Opencv 4.8.0</a>
 2. <a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>
+
+###  How to run
+You can do these commands on terminal for run.
+```
+mkdir build && cd build
+cmake ..
+make
+./image_reconstruct
+```
+
+### What are this code doing ?
+# we declared global variables firstly. These are using in functions
+```c++
+
+// genel degiskenler / global variables
+// ------------------------------------
+bool moveObject = false;
+int mousePosition[2] = {0,0};
+int startPosition[2] = {0,0};
+int endPosition[2]   = {0,0};
+..
+..
+..
+```
