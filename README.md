@@ -14,11 +14,11 @@ https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193
 https://github.com/umutkaanbaser/virtualreallityandopticalmeasuring/assets/59193897/ffaed67d-afb3-48fb-9a02-a2f5fbf932ce
 
 
-### Required Modules
+## Required Modules
 1. <a href="https://docs.opencv.org/4.x/d7/d9f/tutorial_linux_install.html">Opencv 4.8.0</a>
 2. <a href="https://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>
 
-###  How to run
+##  How to run
 You can do these commands on terminal for run.
 ```
 mkdir build && cd build
@@ -27,7 +27,7 @@ make
 ./image_reconstruct
 ```
 
-### What are this code doing ?
+## What are this code doing ?
 #### we declared global variables firstly. These are using in functions
 ```c++
 
@@ -69,42 +69,45 @@ Reconstructer.cal_Fp(); // mesafeÖlçer(range Finder) için fovAçı Donusumu h
 #### and last step is loop. this is end of global informations about this code. We will look detail functions next part.
 ```c++
 // opencv ayarları [adjusting]
-    // ---------------------------
-    cv::Mat image, showImage, prcImage;
-    image = cv::imread("../files/example.jpg");
-    char key;
-    cv::Size showSize(1008, 756); //1008, 756
-    cv::namedWindow("3d-reconstruct");
-    cv::setMouseCallback("3d-reconstruct", MouseCallbackControl, NULL);
-    // ---------------------------
+// ---------------------------
+cv::Mat image, showImage, prcImage;
+image = cv::imread("../files/example.jpg");
+char key;
+cv::Size showSize(1008, 756); //1008, 756
+cv::namedWindow("3d-reconstruct");
+cv::setMouseCallback("3d-reconstruct", MouseCallbackControl, NULL);
+// ---------------------------
 
-    // ana (main) dongu (loop)
-    // -----------------------
-    
-    for(;;){
-        showImage = image.clone();
-        cv::resize(showImage,showImage,showSize);
+// ana (main) dongu (loop)
+// -----------------------
 
-        drawInformation(showImage);
-    
-        if(moveObject) {
-            drawObject(showImage);
-        }
-        else {
-            drawLine(showImage);
-        }
-        
-        cv::imshow("3d-reconstruct",showImage);
-        key = cv::waitKey(1);
-        if (key == 'q'){
-            break;
-        }
-        else if(key == 'w'){
-            boxSize = std::min(100,boxSize+10);
-        }
-        else if(key == 's'){
-             boxSize = std::max(10,boxSize-10);
-        }
+for(;;){
+    showImage = image.clone();
+    cv::resize(showImage,showImage,showSize);
+
+    drawInformation(showImage);
+
+    if(moveObject) {
+        drawObject(showImage);
     }
+    else {
+        drawLine(showImage);
+    }
+    
+    cv::imshow("3d-reconstruct",showImage);
+    key = cv::waitKey(1);
+    if (key == 'q'){
+        break;
+    }
+    else if(key == 'w'){
+        boxSize = std::min(100,boxSize+10);
+    }
+    else if(key == 's'){
+         boxSize = std::max(10,boxSize-10);
+    }
+}
 
 ```
+
+## How can we calculate 2d Image cordinate to 3d real wordl cordinate ? 
+lorem 
