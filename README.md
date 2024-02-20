@@ -28,7 +28,7 @@ make
 ```
 
 ### What are this code doing ?
-# we declared global variables firstly. These are using in functions
+#### we declared global variables firstly. These are using in functions
 ```c++
 
 // genel degiskenler / global variables
