@@ -28,7 +28,7 @@ make
 ./image_reconstruct
 ```
 
-## How tu use
+## How to use
 * this program have two mode. You can change mode with middle button on mouse
 1. First mode is optical Measure: this is meausing real centimetres what you selected.
 - you can use left button on mouse for start point and you can use rigth button for end point. This mode measure between two point in real centimetres automatically.
