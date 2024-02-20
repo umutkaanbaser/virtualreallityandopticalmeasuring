@@ -131,5 +131,33 @@ steps:
 5. the last step is we are transform with 'cvt_Image2World' method. Please check 'Image Reconstruct Documentations' for more info.
 
 other functions not diffrent this process.
+#### You can use this function when you need to know  any object's real position. Just say the object coordinate in Image to this function and get real world coordinate.
 
+#### So Where is 3D real world point in Image ?
+this question's answer is in 'calculate3dto2dPos' function !
+we are just doing <i>coordinate System Transformation </i> in this code.
+this functions do Virtual Reality ! it is calculating cube 3d edge coordinate in 2d Image. THen we do just drawwing.
+```c++
+void calculate3dto2dPos(std::vector<cv::Point3d> pos3d,std::vector<cv::Point2i> &pos2d){
+    cv::Point3d ccs_point;
+    cv::Point2d ics_point;
+    cv::Point2i pcs_point;
+    cv::Point2i ocs_point;
+    //std::cout << "-------" << std::endl;
+    for(uint i =0;i<pos3d.size();i++){
+        Reconstructer.cvt_wcs2ccs(pos3d[i],ccs_point);
+        Reconstructer.cvt_ccs2ics(ccs_point,ics_point);
+        Reconstructer.cvt_ics2pcs(ics_point,pcs_point);
+        Reconstructer.cvt_pcs2ocs(pcs_point,ocs_point);
+        pos2d.push_back(ocs_point);
+        //std::cout << "ters donusum: " << pos3d[i] << "----" << ocs_point << std::endl;
+    }
+}
+```
+steps:
+1. We need to know 3d positions(pos3d) and we are writing result in pos2d variable.
+2. We are declaring pinhole Camera's coordinate systems.
+3. Then we are transform between coordinate systems.
+#### You can use this function when you need draw 3d object to Image
 
+#### Other functions about drawing and Opencv Highgui. You can get more info about it with this <a href="https://docs.opencv.org/3.4/d7/dfc/group__highgui.html">documentation</a>
